@@ -25,7 +25,7 @@ run_program("/sbin/busybox", "mount", "/system");
 ui_print("Installing files to /system...");
 package_extract_dir("system", "/system");
 ui_print("Setting filesystem permissions...");
-set_perm_recursive(0, 0, 0755, 0644, "/system/app/OnePlusGallery", "/system/app/OnePlusGallery");
+set_perm_recursive(0, 0, 0755, 0644, "/system/priv-app/OnePlusCamera", "/system/priv-app/OnePlusGallery");
 set_perm(0, 0, 0644, "lib/libopbaselib.so", "lib/libopcameralib.so", "lib/libopcamera_crypt.so", "lib/libopcamera_native_modules.so", "lib/libopcamera.so", "lib64/libopbaselib.so", "lib64/libopcameralib.so", "lib64/libopcamera.so");
 ui_print("unmounting system");
 run_program("/sbin/busybox", "umount", "/system");
